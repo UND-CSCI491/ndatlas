@@ -40,7 +40,9 @@ The directions below are for Ubuntu 16.04 LTS.
 ### Setup the NDATLAS service to run the webserver (Ubuntu 15.04 or newer)
 
 - Copy ndatlas.services to the services directory
- - `sudo cp /var/www/ndatlas/ndatlas.conf /lib/systemd/system`
+ - `sudo cp /var/www/ndatlas/ndatlas.service /etc/systemd/system`
+- Enable the service on startup
+ - `sudo systemctl enable ndatlas`
 
 ### Setup the NDATLAS service to run the webserver (Ubuntu 14.10 or earlier)
 
