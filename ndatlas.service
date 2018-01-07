@@ -1,0 +1,14 @@
+[Unit]
+Description=node.js server for ND Atlas
+Documentation=https://github.com/UND-CSCI491/ndatlas
+After=network.target
+
+[Service]
+Environment=PORT=8005
+Type=simple
+User=www-data
+ExecStart=/usr/bin/nodejs /var/www/ndatlas/server.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
